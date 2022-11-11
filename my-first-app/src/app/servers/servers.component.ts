@@ -20,8 +20,8 @@ export class ServersComponent implements OnInit {
   servers = ['Testserver', 'Testserver 2']
 
   showText = false; 
-  number = 1; 
-  numberOfClicks: number[] = [];
+  // number = 1; 
+  numberOfClicks: any[] = [];
 
   constructor() { 
     setTimeout(() => {
@@ -48,8 +48,8 @@ export class ServersComponent implements OnInit {
 
   toggleBtn(){
     this.showText = !this.showText; 
-    this.numberOfClicks.push(this.number);
-    this.number++
+    this.numberOfClicks.push(new Date());
+    // this.number++
   }
 
 }

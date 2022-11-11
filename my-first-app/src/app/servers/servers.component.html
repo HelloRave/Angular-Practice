@@ -30,7 +30,10 @@
               Display details
        </button>
        <p *ngIf="showText">Secret Password = tuna</p>
-       <p *ngFor="let click of numberOfClicks"
+       <!-- <p *ngFor="let click of numberOfClicks"
           [ngStyle]="{backgroundColor: click > 4 ? 'blue': ''}"
-          [ngClass]="{'white-text': click >= 5}">{{ click }}</p>
+          [ngClass]="{'white-text': click >= 5}">{{ click }}</p> -->
+       <p *ngFor="let click of numberOfClicks; let i = index"
+          [ngStyle]="{backgroundColor: i > 3 ? 'blue': ''}"
+          [ngClass]="{'white-text': i >= 4}">{{ click }}</p>
 </div>
