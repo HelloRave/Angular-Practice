@@ -19,6 +19,10 @@ export class ServersComponent implements OnInit {
   serverCreated = false; 
   servers = ['Testserver', 'Testserver 2']
 
+  showText = false; 
+  number = 1; 
+  numberOfClicks: number[] = [];
+
   constructor() { 
     setTimeout(() => {
       this.allowNewServer = true; 
@@ -41,4 +45,11 @@ export class ServersComponent implements OnInit {
   resetUserName(){
     this.userName = ''
   }
+
+  toggleBtn(){
+    this.showText = !this.showText; 
+    this.numberOfClicks.push(this.number);
+    this.number++
+  }
+
 }
