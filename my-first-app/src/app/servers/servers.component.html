@@ -16,3 +16,13 @@
 <p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
+
+<hr>
+
+<label>Username</label>
+<input type="text"
+       [(ngModel)]='userName'/>
+<p>{{ userName }}</p>
+<button class="btn btn-danger"
+        [disabled]="userName ? false : true"
+        (click)="resetUserName()">Reset</button>
